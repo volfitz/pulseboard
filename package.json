@@ -1,0 +1,49 @@
+{
+  "name": "pulseboard",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "mock-server": "tsx server/mock-server.ts",
+    "dev:all": "concurrently -n web,ws -c blue,green \"npm:dev\" \"npm:mock-server\""
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.1.0",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.5.13",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.6",
+    "vitest": "^2.1.8",
+    "ws": "^8.18.0"
+  }
+}
